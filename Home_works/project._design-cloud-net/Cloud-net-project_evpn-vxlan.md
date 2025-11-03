@@ -355,9 +355,7 @@ router bgp 65001
    neighbor LEAF-EVPN route-reflector-client
    neighbor LEAF-EVPN send-community extended
    neighbor 10.0.0.12 peer group LEAF-EVPN
-   neighbor 10.0.0.21 remote-as 65000
    neighbor 10.0.0.21 route-map IS-IS-to-BGP in
-   neighbor 10.0.0.22 remote-as 65000
    neighbor 10.0.0.22 route-map IS-IS-to-BGP in
    neighbor 10.0.0.51 peer group LEAF-EVPN
    neighbor 10.0.0.52 peer group LEAF-EVPN
@@ -492,8 +490,6 @@ router bgp 65001
    neighbor LEAF-EVPN ebgp-multihop 5
    neighbor LEAF-EVPN send-community extended
    neighbor 10.0.0.11 peer group LEAF-EVPN
-   neighbor 10.0.0.21 remote-as 65000
-   neighbor 10.0.0.22 remote-as 65000
    !
    address-family evpn
       neighbor LEAF-EVPN activate
@@ -1245,5 +1241,12 @@ Super-Spine-2#
 - ✅ Anycast Gateway: 192.168.10.254, MAC: 00:00:11:11:22:22
 - ✅ VXLAN: VNI 10010, flood list: все VTEP'ы
 - ✅ Route Reflector: Leaf-A1 (10.0.0.11)
+
+---
+
+
+### Спешл! Преза для защиты (если кому интересно)
+Если нужно немного больше подробностей, то вам в презу
+[Protection.Design_networks_CLOUD.Fisun_Ivan](Protection._Design_networks_CLOUD._Fisun_Ivan.pptx)
 
 ---
