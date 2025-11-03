@@ -1,31 +1,38 @@
-DRAFT
 
 Cloud-net-project_evpn-vxlan
 
 
+## Работа по защите проекта, курса "Дизайн сетей ЦОД" 2025г. школы "OTUS"
+
+# Тема: "Отказоустойчивый сервис в растянутом L2 на две фабрики"
 
 
+## Верхнеуровнево: Фабрика EVPN/VXLAN
 
-
-# EVPN/VXLAN Фабрика
-
-> Архитектура: 2 POD (POD-A, POD-B), Super-Spine, IS-IS underlay, BGP EVPN overlay, MLAG, Anycast Gateway
-> Статус: Рабочая конфигурация
+> Архитектура и основные технологии:
+> 2 POD'а (POD-A, POD-B) (clos)
+> Super-Spine
+> IS-IS underlay
+> BGP EVPN overlay
+> MLAG
+> PortChannel
+> Anycast Gateway
+> 
+> Статус архитектуры: Рабочая и протестированная конфигурация в EVE-NG на образах "Arista vEOS 4.29.2F"
 
 ---
 
 ## 1. Таблица адресного пространства
 
-### Подсети
+### Определимся с подсетями
 
-| Префикс | Назначение | Используется? |
-|--------|-----------|---------------|
-| 10.0.0.0/24 | Loopback'и, MLAG Peer-Link | ✅ Да |
-| 172.16.0.0/16 | POD-A Underlay (Leaf → Spine) | ✅ Частично (`172.16.1.0/31`, `172.16.2.0/31`) |
-| 172.18.0.0/16 | POD-B Underlay (Leaf → Spine) | ✅ Частично (`172.18.1.0/31`, `172.18.2.0/31`) |
-| 172.17.0.0/24 | Super-Spine линки (Spine → Super-Spine) | ✅ Да |
-| 192.168.10.0/24 | Клиентская сеть (VLAN 10) | ✅ Да |
-| 172.16.100.0/24 | Management (резерв) | ⚠️ Не используется (можно выделить) |
+| Префикс | Назначение |
+|--------|-----------|
+| 10.0.0.0/24 | Loopback'и, MLAG Peer-Link |
+| 172.16.0.0/16 | POD-A Underlay (Leaf → Spine) |
+| 172.18.0.0/16 | POD-B Underlay (Leaf → Spine) |
+| 172.17.0.0/24 | Super-Spine линки (Spine → Super-Spine) |
+| 192.168.10.0/24 | Клиентская сеть (VLAN 10) |
 
 ---
 
@@ -102,13 +109,13 @@ Cloud-net-project_evpn-vxlan
 | Host-B | 192.168.10.20/24 | Host-B |
 
 ---
-
-## 2. Список узлов (конфигурации)
-
----
 ---
 
-### Host-A 📍
+## 2. Список узлов (вывод "sh run" каждого)
+
+---
+
+### Host-A
 ```
 Host-A#sh run
 ! Command: show running-config
@@ -169,7 +176,7 @@ Host-A#
 
 ---
 
-### Host-B 📍
+### Host-B
 ```
 Host-B#sh run
 ! Command: show running-config
@@ -230,7 +237,7 @@ Host-B#
 
 ---
 
-### Leaf-A1 📍
+### Leaf-A1
 ```
 Leaf-A1#sh run
 ! Command: show running-config
@@ -366,8 +373,9 @@ end
 Leaf-A1#
 ```
 
+---
 
-##📍 Leaf-A2
+### Leaf-A2
 ```
 Leaf-A2#sh run
 ! Command: show running-config
@@ -502,8 +510,9 @@ end
 Leaf-A2#
 ```
 
+---
 
-##📍 Leaf-B1
+### Leaf-B1
 ```
 Leaf-B1#sh run
 ! Command: show running-config
@@ -630,8 +639,9 @@ end
 Leaf-B1#
 ```
 
+---
 
-##📍 Leaf-B2
+### Leaf-B2
 ```
 Leaf-B2#sh run
 ! Command: show running-config
@@ -758,8 +768,9 @@ end
 Leaf-B2#
 ```
 
+---
 
-##📍 Spine-A1
+### Spine-A1
 ```
 Spine-A1#sh run
 ! Command: show running-config
@@ -833,8 +844,9 @@ end
 Spine-A1#
 ```
 
+---
 
-##📍 Spine-A2
+### Spine-A2
 ```
 Spine-A2#sh run
 ! Command: show running-config
@@ -908,8 +920,9 @@ end
 Spine-A2#
 ```
 
+---
 
-##📍 Spine-B1
+### Spine-B1
 ```
 Spine-B1#sh run
 ! Command: show running-config
@@ -983,8 +996,9 @@ end
 Spine-B1#
 ```
 
+---
 
-##📍 Spine-B2
+### Spine-B2
 ```
 Spine-B2#sh run
 ! Command: show running-config
@@ -1058,8 +1072,9 @@ end
 Spine-B2#
 ```
 
+---
 
-##📍 Super-Spine-1
+### Super-Spine-1
 ```
 Super-Spine-1#sh run
 ! Command: show running-config
@@ -1133,8 +1148,9 @@ end
 Super-Spine-1#
 ```
 
+---
 
-##📍 Super-Spine-2
+### Super-Spine-2
 ```
 Super-Spine-2#sh run
 ! Command: show running-config
@@ -1211,13 +1227,13 @@ Super-Spine-2#
 
 ---
 
-## Примечания
+## Резюмируем по интересным блокам
 
 - ✅ IS-IS — основа underlay, уровень L2
-- ✅ BGP EVPN — только на Leaf (AS 65001), Spine не участвуют в BGP
-- ✅ MLAG — включён, домены: POD-A, POD-B
+- ✅ BGP EVPN — только на Leaf (AS 65001), Spine не участвуют в BGP(спайны на is-is)
+- ✅ MLAG — в каждом POD'е на уровне Leaf'ов
 - ✅ Anycast Gateway: 192.168.10.254, MAC: 00:00:11:11:22:22
-- ✅ VXLAN: VNI 10010, flood list: все VTEP
-- ✅ Route Reflector: Leaf-A1 (`10.0.0.11`)
+- ✅ VXLAN: VNI 10010, flood list: все VTEP'ы
+- ✅ Route Reflector: Leaf-A1 (10.0.0.11)
 
 ---
