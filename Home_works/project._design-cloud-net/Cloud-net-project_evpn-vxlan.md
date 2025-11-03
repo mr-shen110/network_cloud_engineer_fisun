@@ -107,7 +107,7 @@ Cloud-net-project_evpn-vxlan
 
 > Кликни по названию узла для ознакомления с конфигом
 
-###📍 Host-A
+##📍 Host-A
 ```
 Host-A#sh run
 ! Command: show running-config
@@ -167,8 +167,8 @@ Host-A#
 ```
 
 
-###📍 Host-B
-\```
+##📍 Host-B
+```
 Host-B#sh run
 ! Command: show running-config
 ! device: Host-B (vEOS-lab, EOS-4.29.2F)
@@ -224,11 +224,11 @@ ip route 0.0.0.0/0 192.168.10.254
 !
 end
 Host-B#
-\```
+```
 
 
-<details>
-<summary>📍 Leaf-A1</summary>
+##📍 Leaf-A1
+```
 Leaf-A1#sh run
 ! Command: show running-config
 ! device: Leaf-A1 (vEOS-lab, EOS-4.29.2F)
@@ -362,12 +362,11 @@ router isis 1
 end
 Leaf-A1#
 ```
-</details>
 
 
-<details>
-<summary>📍 Leaf-A2</summary>
-```Leaf-A2#sh run
+##📍 Leaf-A2
+```
+Leaf-A2#sh run
 ! Command: show running-config
 ! device: Leaf-A2 (vEOS-lab, EOS-4.29.2F)
 !
@@ -498,12 +497,12 @@ router isis 1
 !
 end
 Leaf-A2#
-</details>
+```
 
 
-<details>
-<summary>📍 Leaf-B1</summary>
-```Leaf-B1#sh run
+##📍 Leaf-B1
+```
+Leaf-B1#sh run
 ! Command: show running-config
 ! device: Leaf-B1 (vEOS-lab, EOS-4.29.2F)
 !
@@ -626,12 +625,12 @@ router isis 1
 !
 end
 Leaf-B1#
-</details>
+```
 
 
-<details>
-<summary>📍 Leaf-B2</summary>
-```Leaf-B2#sh run
+##📍 Leaf-B2
+```
+Leaf-B2#sh run
 ! Command: show running-config
 ! device: Leaf-B2 (vEOS-lab, EOS-4.29.2F)
 !
@@ -754,12 +753,12 @@ router isis 1
 !
 end
 Leaf-B2#
-</details>
+```
 
 
-<details>
-<summary>📍 Spine-A1</summary>
-```Spine-A1#sh run
+##📍 Spine-A1
+```
+Spine-A1#sh run
 ! Command: show running-config
 ! device: Spine-A1 (vEOS-lab, EOS-4.29.2F)
 !
@@ -829,12 +828,12 @@ router isis 1
 !
 end
 Spine-A1#
-</details>
+```
 
 
-<details>
-<summary>📍 Spine-A2</summary>
-```Spine-A2#sh run
+##📍 Spine-A2
+```
+Spine-A2#sh run
 ! Command: show running-config
 ! device: Spine-A2 (vEOS-lab, EOS-4.29.2F)
 !
@@ -904,12 +903,12 @@ router isis 1
 !
 end
 Spine-A2#
-</details>
+```
 
 
-<details>
-<summary>📍 Spine-B1</summary>
-```Spine-B1#sh run
+##📍 Spine-B1
+```
+Spine-B1#sh run
 ! Command: show running-config
 ! device: Spine-B1 (vEOS-lab, EOS-4.29.2F)
 !
@@ -979,12 +978,12 @@ router isis 1
 !
 end
 Spine-B1#
-</details>
+```
 
 
-<details>
-<summary>📍 Spine-B2</summary>
-```Spine-B2#sh run
+##📍 Spine-B2
+```
+Spine-B2#sh run
 ! Command: show running-config
 ! device: Spine-B2 (vEOS-lab, EOS-4.29.2F)
 !
@@ -1054,12 +1053,12 @@ router isis 1
 !
 end
 Spine-B2#
-</details>
+```
 
 
-<details>
-<summary>📍 Super-Spine-1</summary>
-```Super-Spine-1#sh run
+##📍 Super-Spine-1
+```
+Super-Spine-1#sh run
 ! Command: show running-config
 ! device: Super-Spine-1 (vEOS-lab, EOS-4.29.2F)
 !
@@ -1129,12 +1128,12 @@ router isis 1
 !
 end
 Super-Spine-1#
-</details>
+```
 
 
-<details>
-<summary>📍 Super-Spine-2</summary>
-```Super-Spine-2#sh run
+##📍 Super-Spine-2
+```
+Super-Spine-2#sh run
 ! Command: show running-config
 ! device: Super-Spine-2 (vEOS-lab, EOS-4.29.2F)
 !
@@ -1204,7 +1203,7 @@ router isis 1
 !
 end
 Super-Spine-2#
-</details>
+```
 
 
 ---
