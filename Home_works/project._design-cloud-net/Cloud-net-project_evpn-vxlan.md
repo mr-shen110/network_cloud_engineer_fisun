@@ -105,9 +105,10 @@ Cloud-net-project_evpn-vxlan
 
 ## 2. Список узлов (конфигурации)
 
-> Кликни по названию узла для ознакомления с конфигом
+---
+---
 
-##📍 Host-A
+###📍 Host-A
 ```
 Host-A#sh run
 ! Command: show running-config
@@ -166,8 +167,9 @@ end
 Host-A#
 ```
 
+---
 
-##📍 Host-B
+###📍 Host-B
 ```
 Host-B#sh run
 ! Command: show running-config
@@ -226,6 +228,7 @@ end
 Host-B#
 ```
 
+---
 
 ##📍 Leaf-A1
 ```
