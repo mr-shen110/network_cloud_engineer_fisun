@@ -109,7 +109,7 @@ Cloud-net-project_evpn-vxlan
 
 <details>
 <summary>📍 Host-A</summary>
-::>
+\```
 Host-A#sh run
 ! Command: show running-config
 ! device: Host-A (vEOS-lab, EOS-4.29.2F)
@@ -165,13 +165,14 @@ ip route 0.0.0.0/0 192.168.10.254
 !
 end
 Host-A#
-<::
+\```
 </details>
 
 
 <details>
 <summary>📍 Host-B</summary>
-::>Host-B#sh run
+\```
+Host-B#sh run
 ! Command: show running-config
 ! device: Host-B (vEOS-lab, EOS-4.29.2F)
 !
@@ -226,7 +227,7 @@ ip route 0.0.0.0/0 192.168.10.254
 !
 end
 Host-B#
-<::
+\```
 </details>
 
 
