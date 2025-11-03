@@ -108,7 +108,7 @@ Cloud-net-project_evpn-vxlan
 > Кликни по названию узла для ознакомления с конфигом
 
 ###📍 Host-A
-python
+```
 Host-A#sh run
 ! Command: show running-config
 ! device: Host-A (vEOS-lab, EOS-4.29.2F)
@@ -164,12 +164,12 @@ ip route 0.0.0.0/0 192.168.10.254
 !
 end
 Host-A#
+```
 
 
-
-<details>
-<summary>📍 Host-B</summary>
-\```Host-B#sh run
+###📍 Host-B
+\```
+Host-B#sh run
 ! Command: show running-config
 ! device: Host-B (vEOS-lab, EOS-4.29.2F)
 !
@@ -224,7 +224,7 @@ ip route 0.0.0.0/0 192.168.10.254
 !
 end
 Host-B#
-</details>
+\```
 
 
 <details>
