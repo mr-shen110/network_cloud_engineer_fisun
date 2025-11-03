@@ -107,9 +107,8 @@ Cloud-net-project_evpn-vxlan
 
 > Кликни по названию узла для ознакомления с конфигом
 
-<details>
-<summary>📍 Host-A</summary>
-\```python
+###📍 Host-A
+python
 Host-A#sh run
 ! Command: show running-config
 ! device: Host-A (vEOS-lab, EOS-4.29.2F)
@@ -165,8 +164,7 @@ ip route 0.0.0.0/0 192.168.10.254
 !
 end
 Host-A#
-\```
-</details>
+
 
 
 <details>
@@ -225,14 +223,14 @@ ip routing
 ip route 0.0.0.0/0 192.168.10.254
 !
 end
-Host-B#\```
+Host-B#
 </details>
 
 
 <details>
 <summary>📍 Leaf-A1</summary>
-```Leaf-A1#sh run```
-\```! Command: show running-config\```
+Leaf-A1#sh run
+! Command: show running-config
 ! device: Leaf-A1 (vEOS-lab, EOS-4.29.2F)
 !
 ! boot system flash:/vEOS-lab.swi
