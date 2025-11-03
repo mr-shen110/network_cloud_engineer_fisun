@@ -240,7 +240,6 @@ Host-B#
 <details>
 <summary>📍 Leaf-A1</summary>
 ```
-
 Leaf-A1#sh run
 ! Command: show running-config
 ! device: Leaf-A1 (vEOS-lab, EOS-4.29.2F)
@@ -373,7 +372,6 @@ router isis 1
 !
 end
 Leaf-A1#
-
 ```
 </details>
 
@@ -515,7 +513,6 @@ router isis 1
 !
 end
 Leaf-A2#
-
 ```
 </details>
 
@@ -525,7 +522,6 @@ Leaf-A2#
 <details>
 <summary>📍 Leaf-B1</summary>
 ```
-
 Leaf-B1#sh run
 ! Command: show running-config
 ! device: Leaf-B1 (vEOS-lab, EOS-4.29.2F)
@@ -649,7 +645,6 @@ router isis 1
 !
 end
 Leaf-B1#
-
 ```
 </details>
 
@@ -783,7 +778,6 @@ router isis 1
 !
 end
 Leaf-B2#
-
 ```
 </details>
 
@@ -863,7 +857,6 @@ router isis 1
 !
 end
 Spine-A1#
-
 ```
 </details>
 
@@ -942,7 +935,6 @@ router isis 1
 !
 end
 Spine-A2#
-
 ```
 </details>
 
@@ -1023,7 +1015,6 @@ router isis 1
 !
 end
 Spine-B1#
-
 ```
 </details>
 
@@ -1103,7 +1094,6 @@ router isis 1
 !
 end
 Spine-B2#
-
 ```
 </details>
 
@@ -1184,7 +1174,6 @@ router isis 1
 !
 end
 Super-Spine-1#
-
 ```
 </details>
 
@@ -1265,7 +1254,6 @@ router isis 1
 !
 end
 Super-Spine-2#
-
 ```
 </details>
 
