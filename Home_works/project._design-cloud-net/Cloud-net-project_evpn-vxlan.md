@@ -164,6 +164,7 @@ ip route 0.0.0.0/0 192.168.10.254
 !
 end
 Host-A#
+```
 </details>
 
 
@@ -224,6 +225,7 @@ ip route 0.0.0.0/0 192.168.10.254
 !
 end
 Host-B#
+```
 </details>
 
 
@@ -361,6 +363,7 @@ router isis 1
 !
 end
 Leaf-A1#
+```
 </details>
 
 
