@@ -231,8 +231,8 @@ Host-B#\```
 
 <details>
 <summary>📍 Leaf-A1</summary>
-```Leaf-A1#sh run
-! Command: show running-config
+```Leaf-A1#sh run```
+\```! Command: show running-config\```
 ! device: Leaf-A1 (vEOS-lab, EOS-4.29.2F)
 !
 ! boot system flash:/vEOS-lab.swi
