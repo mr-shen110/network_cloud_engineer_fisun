@@ -1,7 +1,4 @@
 
-Cloud-net-project_evpn-vxlan
-
-
 ## Работа по защите проекта, курса "Дизайн сетей ЦОД" 2025г. школы "OTUS"
 
 # Тема: "Отказоустойчивый сервис в растянутом L2 на две фабрики"
@@ -19,6 +16,15 @@ Cloud-net-project_evpn-vxlan
 > Anycast Gateway
 > 
 > Статус архитектуры: Рабочая и протестированная конфигурация в EVE-NG на образах "Arista vEOS 4.29.2F"
+
+---
+
+## 0. Физическое размещение и линки
+
+![Скриншот_1](Fisun-project_screenshot_1.png)
+
+![Скриншот_2](https://github.com/mr-shen110/network_cloud_engineer_fisun/blob/main/Home_works/project._design-cloud-net/Fisun-project_screenshot_1.png)
+
 
 ---
 
