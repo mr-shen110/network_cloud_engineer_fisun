@@ -7,16 +7,16 @@
 ## Верхнеуровнево: Фабрика EVPN/VXLAN
 
 1. Архитектура и основные технологии:
-    2 POD'а (POD-A, POD-B) (clos)
-    Super-Spine
-    IS-IS underlay
-    BGP EVPN overlay
-    MLAG
-    PortChannel
-    Anycast Gateway
+    1.1. 2 POD'а (POD-A, POD-B) (clos)
+    1.2. Super-Spine
+    1.3. IS-IS underlay
+    1.4. BGP EVPN overlay
+    1.5. MLAG
+    1.6. PortChannel
+    1.7. Anycast Gateway
  
 2. Статус архитектуры:
-    Рабочая и протестированная конфигурация в EVE-NG на образах "Arista vEOS 4.29.2F"
+    2.1. Рабочая и протестированная конфигурация в EVE-NG на образах "Arista vEOS 4.29.2F"
 
 ---
 
