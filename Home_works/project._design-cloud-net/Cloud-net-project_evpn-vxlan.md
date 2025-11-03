@@ -6,25 +6,23 @@
 
 ## Верхнеуровнево: Фабрика EVPN/VXLAN
 
-> Архитектура и основные технологии:
-> 2 POD'а (POD-A, POD-B) (clos)
-> Super-Spine
-> IS-IS underlay
-> BGP EVPN overlay
-> MLAG
-> PortChannel
-> Anycast Gateway
-> 
-> Статус архитектуры: Рабочая и протестированная конфигурация в EVE-NG на образах "Arista vEOS 4.29.2F"
+1. Архитектура и основные технологии:
+- 2 POD'а (POD-A, POD-B) (clos)
+- Super-Spine
+- IS-IS underlay
+- BGP EVPN overlay
+- MLAG
+- PortChannel
+- Anycast Gateway
+ 
+2. Статус архитектуры:
+- Рабочая и протестированная конфигурация в EVE-NG на образах "Arista vEOS 4.29.2F"
 
 ---
 
-## 0. Физическое размещение и линки
+## 0. Коммутация и распределение линков
 
 ![Скриншот_1](Fisun-project_screenshot_1.png)
-
-![Скриншот_2](https://github.com/mr-shen110/network_cloud_engineer_fisun/blob/main/Home_works/project._design-cloud-net/Fisun-project_screenshot_1.png)
-
 
 ---
 
