@@ -108,7 +108,7 @@ Cloud-net-project_evpn-vxlan
 ---
 ---
 
-###📍 Host-A
+### Host-A 📍
 ```
 Host-A#sh run
 ! Command: show running-config
@@ -169,7 +169,7 @@ Host-A#
 
 ---
 
-###📍 Host-B
+### Host-B 📍
 ```
 Host-B#sh run
 ! Command: show running-config
@@ -230,7 +230,7 @@ Host-B#
 
 ---
 
-##📍 Leaf-A1
+### Leaf-A1 📍
 ```
 Leaf-A1#sh run
 ! Command: show running-config
